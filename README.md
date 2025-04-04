@@ -155,3 +155,6 @@
   - BugSnag
   - LockRocket
 - sentry.io
+
+- supabase project pass
+  #mypass@IssueTracker
