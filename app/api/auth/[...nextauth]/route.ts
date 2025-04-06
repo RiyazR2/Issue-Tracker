@@ -16,6 +16,7 @@
 import NextAuth from "next-auth";
 import authOptions from "@/app/auth/authOptions";
 
+// NextAuth handler
 const handler = async (req: any, res: any) => {
   try {
     return await NextAuth(req, res, authOptions);
@@ -25,4 +26,5 @@ const handler = async (req: any, res: any) => {
   }
 };
 
+// Export GET and POST handlers
 export { handler as GET, handler as POST };

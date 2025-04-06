@@ -62,6 +62,10 @@ const authOptions: NextAuthOptions = {
   session: { strategy: "jwt", maxAge: 30 * 24 * 60 * 60 },
   secret: process.env.NEXTAUTH_SECRET,
   debug: process.env.NODE_ENV === "development",
+  pages: {
+    error: "/auth/error", // Path to custom error page
+  },
 };
 
-export default authOptions;
+
+export default authOptions
