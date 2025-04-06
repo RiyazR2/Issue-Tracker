@@ -45,7 +45,7 @@ const IssueDetailPage = async ({ params }: Props) => {
 };
 
 export async function generateMetadata({ params }: Props) {
-  const issue = await await fetchUser(parseInt(params.id))
+  const issue = await fetchUser(parseInt(params.id));
   return {
     title: issue?.title,
     description: "Detail of issue" + issue?.id,
