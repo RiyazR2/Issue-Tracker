@@ -100,7 +100,7 @@
 - setup nextAuth
 - Configure Google Provider
 - Adding the Prisma Adapter
-  - npm install @prisma/client @next-auth/prisma-adapter
+  - npm install @prisma/client @next-auth/prisma-adapter@1.0.7
   - npm install prisma --save-dev
 - Add the login and logout links
 - Change layout of the navbar

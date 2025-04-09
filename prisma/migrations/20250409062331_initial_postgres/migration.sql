@@ -4,12 +4,12 @@ CREATE TYPE "Status" AS ENUM ('OPEN', 'IN_PROGRESS', 'CLOSED');
 -- CreateTable
 CREATE TABLE "Issue" (
     "id" SERIAL NOT NULL,
-    "title" TEXT NOT NULL,
+    "title" VARCHAR(255) NOT NULL,
     "description" TEXT NOT NULL,
     "status" "Status" NOT NULL DEFAULT 'OPEN',
     "createdAt" TIMESTAMP(3) NOT NULL DEFAULT CURRENT_TIMESTAMP,
     "updatedAt" TIMESTAMP(3) NOT NULL,
-    "assignedToUserId" TEXT,
+    "assignedToUserId" VARCHAR(255),
 
     CONSTRAINT "Issue_pkey" PRIMARY KEY ("id")
 );
@@ -68,6 +68,9 @@ CREATE UNIQUE INDEX "Session_sessionToken_key" ON "Session"("sessionToken");
 
 -- CreateIndex
 CREATE UNIQUE INDEX "User_email_key" ON "User"("email");
+
+-- CreateIndex
+CREATE UNIQUE INDEX "VerificationToken_token_key" ON "VerificationToken"("token");
 
 -- CreateIndex
 CREATE UNIQUE INDEX "VerificationToken_identifier_token_key" ON "VerificationToken"("identifier", "token");
